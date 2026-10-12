@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapify • Ice Cube</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="top-logo">Rapify</div>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a class="drop-btn">Playlist-uri ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="BigL.html">Big L</a></li>
+                    <li><a href="2Pac.html">2Pac</a></li>
+                    <li><a href="IceCube.html">Ice Cube</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<audio id="audio-player">
+    <source id="audio-source" src="Muzica/Big L - Put It On (Official Music Video).mp3" type="audio/mpeg">
+    Browserul tău nu suportă tagul audio.
+</audio>
+
+<main class="page-wrapper">
+
+    <section class="left-panel">
+        <div class="left-video-wrapper">
+            <canvas id="visualizer"></canvas>
+            <video id="track-video" autoplay muted loop playsinline>
+                <source id="video-source" src="" type="video/mp4">
+                Browserul tău nu suportă tagul video.
+            </video>
+        </div>
+
+        <div class="info-panel">
+            <h1 class="song-title" id="info-title"></h1>
+            <h2 class="song-artist" id="info-artist"></h2>
+
+            <p class="song-desc" id="info-desc-1">
+                
+            </p>
+
+            <p class="song-desc" id="info-desc-2">
+                
+            </p>
+
+            <p class="song-desc" id="info-desc-3">
+                
+            </p>
+        </div>
+    </section>
+
+    <aside class="right-panel">
+        <video class="right-bg-video" autoplay muted loop playsinline>
+            <source src="My Movie.mp4" type="video/mp4">
+            Browserul tău nu suportă tagul video.
+        </video>
+
+        <div class="right-overlay"></div>
+
+        <div class="track-list-panel">
+            <h2>ICE CUBE</h2>
+
+            <ul class="track-list">
+                <!-- Ice Cube – Check Yo Self (Remix) -->
+                <li class="track-item"
+                    data-src="Muzica/Ice Cube - Check Yo Self (Remix) (Official Music Video).mp3"
+                    data-video="Video/Ice Cube - Check Yo Self (Remix) (Official Music Video).mp4"
+                    data-title="Check Yo Self (Remix)"
+                    data-artist="Ice Cube"
+                    data-info-title="Check Yo Self (Remix)"
+                    data-info-artist="Ice Cube • 1993"
+                    data-info-1="„Check Yo Self (Remix)” este versiunea clasică pe beat-ul lui Grandmaster Flash – „The Message”."
+                    data-info-2="Cube livrează bar-uri pline de atitudine și comentarii sociale dure."
+                    data-info-3="În Rapify, remixul e inclus ca exemplu de reinterpretare ’90 a unor instrumentale old-school.">
+                    <span class="t-title">Check Yo Self (Remix)</span>
+                    <span class="t-artist">Ice Cube</span>
+                </li>
+
+                <!-- Ice Cube – You Know How We Do It -->
+                <li class="track-item"
+                    data-src="Muzica/Ice Cube - You Know How We Do It.mp3"
+                    data-video="Video/Ice Cube - You Know How We Do It.mp4"
+                    data-title="You Know How We Do It"
+                    data-artist="Ice Cube"
+                    data-info-title="You Know How We Do It"
+                    data-info-artist="Ice Cube • 1993"
+                    data-info-1="„You Know How We Do It” e unul dintre cele mai chill și smooth track-uri ale lui Ice Cube."
+                    data-info-2="Beat lent, bass puternic și un vibe perfect de West Coast night drive."
+                    data-info-3="În Rapify, piesa intră în selecția de track-uri laid-back, ideale de fundal.">
+                    <span class="t-title">You Know How We Do It</span>
+                    <span class="t-artist">Ice Cube</span>
+                </li>
+
+                <!-- Ice Cube, Dr. Dre, MC Ren – Hello -->
+                <li class="track-item"
+                    data-src="Muzica/Ice Cube, Dr. Dre, MC Ren - Hello.mp3"
+                    data-video="Video/Ice Cube, Dr. Dre, MC Ren - Hello.mp4"
+                    data-title="Hello"
+                    data-artist="Ice Cube, Dr. Dre, MC Ren"
+                    data-info-title="Hello"
+                    data-info-artist="Ice Cube, Dr. Dre, MC Ren • 2000"
+                    data-info-1="„Hello” reunifică o parte din N.W.A, cu Ice Cube, Dr. Dre și MC Ren pe același track."
+                    data-info-2="Piesa marchează o întoarcere la rădăcini, dar cu sunetul începutului de ani 2000."
+                    data-info-3="În Rapify, „Hello” stă la granița dintre epoca ’90 și noul val, păstrând totuși ADN-ul N.W.A.">
+                    <span class="t-title">Hello</span>
+                    <span class="t-artist">Ice Cube, Dr. Dre, MC Ren</span>
+                </li>
+
+
+            </ul>
+        </div>
+    </aside>
+
+</main>
+
+<footer class="player-bar">
+    <div class="player-info">
+        <span id="current-title">Put It On</span>
+        <span id="current-artist">Big L</span>
+    </div>
+
+    <button id="play-pause" class="player-btn">►</button>
+
+    <input type="range" id="timeline" value="0" min="0" max="100">
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

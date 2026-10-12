@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapify • Autentificare</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <!-- Video de fundal -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="My Movie.mp4" type="video/mp4">
+        Browserul tău nu suportă tagul video.
+    </video>
+
+    <!-- Audio de fundal (doar sunet, ascuns vizual) -->
+    <audio id="bg-audio" loop>
+        <source src="nas-represent-instrumental-128-ytshorts.savetube.me.mp3" type="audio/mpeg">
+        Browserul tău nu suportă tagul audio.
+    </audio>
+
+    <!-- Ca sa pot sa fac overlay intunecat -->
+    <div class="overlay"></div>
+
+<main class="auth-wrapper">
+
+    <form class="music-form">
+        <button type="button" class="music-trigger">Play Music</button>
+    </form>
+
+
+    <div class="auth-logo-container">
+        <h1 class="auth-logo">RAPIFY</h1>
+        <p class="auth-logo-sub">'80–'90 Classics Only</p>
+    </div>
+
+    <div class="login-tag">
+        <h2>Autentificare</h2>
+        <p class="login-desc">Intră în colecția ta de rap old-school.</p>
+
+        <form action="index.html">
+            <label for="username">Nickname</label>
+            <input type="text" id="username" placeholder="ex: bigL_1999">
+
+            <label for="password">Parolă</label>
+            <input type="password" id="password" placeholder="••••••••">
+
+            <button type="submit">Intră</button>
+
+            <p class="login-note">
+                Proiect educațional. Drepturile asupra melodiilor și videoclipurilor aparțin deținătorilor lor.
+            </p>
+        </form>
+  </div>
+
+</main>
+<script src="auth.js"></script>
+</body>
+</html>

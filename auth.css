@@ -1,0 +1,249 @@
+/* 
+   Variabile (culori principale)
+*/
+
+:root {
+    --accent: #18ff88;
+    --text-main: #ffffff;
+    --text-muted: #cfcfcf;
+    --bg-dark: #050505;
+}
+
+/* 
+   Reset de baza
+ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* 
+    Pentru Videoul de pe fundal si overlay
+*/
+
+#bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: grayscale(1) contrast(1.2) brightness(0.6);
+}
+
+/* strat întunecat peste video pentru contrast */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.7)
+    );
+    z-index: -1;
+}
+
+/* 
+   Layout principal
+ */
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;      /* logo SUS, eticheta DEDESUBT */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* 
+   Logo mare si ce scrie sub el
+ */
+
+.auth-logo-container {
+    margin-bottom: 3rem;      /* separă de etichetă */
+    margin-top: -70px;        /* URCĂ logo-ul mai sus */
+}
+
+.auth-logo {
+    font-family: Impact, "Anton", sans-serif;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-shadow:
+        0 0 15px rgba(24, 255, 136, 0.7),
+        0 0 25px rgba(24, 255, 136, 0.3);
+    text-transform: uppercase;
+}
+
+.auth-logo-sub {
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 
+    Eticheta login
+*/
+
+.login-tag {
+    position: relative;
+    width: 400px;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+
+    backdrop-filter: blur(4px);
+
+    /* ca sa fie putin inclinat : */
+    transform: rotate(-2deg);
+}
+
+/* sticker mic deasupra etichetei – gen la bonus cu ::before */
+.login-tag::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    width: 70px;
+    height: 8px;
+
+    background: var(--accent);
+    opacity: 0.8;
+    transform: rotate(-4deg);
+}
+
+/* "Autentificare" */
+.login-tag h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+/* text explicativ mic în card */
+.login-tag .login-desc {
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* 
+   Formular
+ */
+
+.login-tag form {
+    text-align: left;
+}
+
+.login-tag label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    display: block;
+}
+
+.login-tag input {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.4rem 0 1rem 0;
+
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* pentru placeholder */
+.login-tag input::placeholder {
+    color: rgba(230, 230, 230, 0.7);
+}
+
+/* buton login */
+.login-tag button {
+    width: 100%;
+    padding: 0.7rem;
+
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-weight: bold;
+    color: #000;
+}
+
+/* text mic sub formular */
+.login-tag .login-note {
+    margin-top: 0.8rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* 
+   Responsive (telefoane)
+ */
+
+@media (max-width: 600px) {
+    .auth-logo {
+        font-size: 2.5rem;
+    }
+
+    .auth-logo-sub {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+    }
+
+    .login-tag {
+        width: 90%;
+        padding: 1.5rem;
+        transform: rotate(0deg); 
+    }
+}
+
+/* pentru butonul de muzica
+*/
+.music-form {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.music-trigger {
+    padding: 8px 14px;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.music-trigger:hover {
+    opacity: 1;
+}

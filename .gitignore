@@ -1,0 +1,6 @@
+# media (copyrighted, too large for git)
+*.mp3
+*.mp4
+Muzica/
+Video/
+.DS_Store
