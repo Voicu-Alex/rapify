@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Info Panels (Text)
     const titleEl = document.getElementById("current-title");
     const artistEl = document.getElementById("current-artist");
+
+    // video ambiental (unul per playlist), ruleaza continuu in spatele vizualizatorului
+    const video = document.getElementById("track-video");
+    const videoSource = document.getElementById("video-source");
     
 
 
@@ -149,11 +153,19 @@ document.addEventListener("DOMContentLoaded", () => {
     function selectTrack(target, autoplay) {
 
         const src = target.getAttribute("data-src");
+        const videoSrc = target.getAttribute("data-video");
         const title = target.getAttribute("data-title");
         const artist = target.getAttribute("data-artist");
 
         source.src = src;
         audio.load();
+
+        // schimbam videoul doar daca piesa e din alt playlist
+        if (videoSrc && videoSource.getAttribute("src") !== videoSrc) {
+            videoSource.setAttribute("src", videoSrc);
+            video.load();
+            video.play().catch(() => {});
+        }
 
         if (autoplay) {
             if (!isVisualizerInit) {

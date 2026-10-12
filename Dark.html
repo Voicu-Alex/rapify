@@ -34,9 +34,12 @@
 
 <main class="page-wrapper">
 
-    <!-- stanga: vizualizator si descrierea piesei -->
+    <!-- stanga: video + vizualizator si descrierea piesei -->
     <section class="left-panel">
         <div class="left-video-wrapper">
+            <video id="track-video" autoplay muted loop playsinline>
+                <source id="video-source" src="" type="video/webm">
+            </video>
             <canvas id="visualizer"></canvas>
         </div>
 
@@ -62,6 +65,7 @@
                 <!-- MTA -->
                 <li class="track-item"
                     data-src="audio/mta.mp3"
+                    data-video="video/city-night.webm"
                     data-title="MTA"
                     data-artist="Kevin MacLeod"
                     data-info-title="MTA"
@@ -76,6 +80,7 @@
                 <!-- Lewis and Dekalb -->
                 <li class="track-item"
                     data-src="audio/lewis-and-dekalb.mp3"
+                    data-video="video/city-night.webm"
                     data-title="Lewis and Dekalb"
                     data-artist="Kevin MacLeod"
                     data-info-title="Lewis and Dekalb"
@@ -90,6 +95,7 @@
                 <!-- Basic Implosion -->
                 <li class="track-item"
                     data-src="audio/basic-implosion.mp3"
+                    data-video="video/city-night.webm"
                     data-title="Basic Implosion"
                     data-artist="Kevin MacLeod"
                     data-info-title="Basic Implosion"

@@ -34,9 +34,12 @@
 
 <main class="page-wrapper">
 
-    <!-- stanga: vizualizator si descrierea piesei -->
+    <!-- stanga: video + vizualizator si descrierea piesei -->
     <section class="left-panel">
         <div class="left-video-wrapper">
+            <video id="track-video" autoplay muted loop playsinline>
+                <source id="video-source" src="" type="video/webm">
+            </video>
             <canvas id="visualizer"></canvas>
         </div>
 
@@ -62,6 +65,7 @@
                 <!-- Griphop -->
                 <li class="track-item"
                     data-src="audio/griphop.mp3"
+                    data-video="video/brooklyn.webm"
                     data-title="Griphop"
                     data-artist="Kevin MacLeod"
                     data-info-title="Griphop"
@@ -76,6 +80,7 @@
                 <!-- Got Funk -->
                 <li class="track-item"
                     data-src="audio/got-funk.mp3"
+                    data-video="video/brooklyn.webm"
                     data-title="Got Funk"
                     data-artist="Kevin MacLeod"
                     data-info-title="Got Funk"
@@ -90,6 +95,7 @@
                 <!-- Vicious -->
                 <li class="track-item"
                     data-src="audio/vicious.mp3"
+                    data-video="video/brooklyn.webm"
                     data-title="Vicious"
                     data-artist="Kevin MacLeod"
                     data-info-title="Vicious"
