@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const titleEl = document.getElementById("current-title");
     const artistEl = document.getElementById("current-artist");
     
-    
-    const video = document.getElementById("track-video");
-    const videoSource = document.getElementById("video-source");
 
 
     const storedUser = localStorage.getItem("rapifyUser");
@@ -54,6 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
         renderFrame();
     }
 
+    // bare statice cat timp nu canta nimic
+    function drawIdle() {
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+        const bars = 90;
+        const barWidth = canvas.width / bars - 2;
+        ctx.fillStyle = "rgba(24, 255, 136, 0.25)";
+        for (let i = 0; i < bars; i++) {
+            const h = 6 + Math.abs(Math.sin(i * 0.35)) * 30;
+            ctx.fillRect(i * (barWidth + 2), canvas.height / 2 - h / 2, barWidth, h);
+        }
+    }
+    drawIdle();
+    window.addEventListener("resize", () => { if (!isVisualizerInit) drawIdle(); });
+
     function renderFrame() {
         requestAnimationFrame(renderFrame); 
 
@@ -70,18 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // Curățăm canvasul
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        const barWidth = (canvas.width / bufferLength) * 2.5;
-        let barHeight;
-        let x = 0;
+        // folosim doar frecventele joase/medii, unde e energia la rap
+        const bars = Math.floor(bufferLength * 0.7);
+        const barWidth = canvas.width / bars - 2;
+        const mid = canvas.height / 2;
 
-        for (let i = 0; i < bufferLength; i++) {
-            barHeight = (dataArray[i] / 255) * canvas.height * 2;
+        for (let i = 0; i < bars; i++) {
+            const barHeight = (dataArray[i] / 255) * canvas.height * 0.8;
+            const x = i * (barWidth + 2);
 
-            ctx.fillStyle = `rgba(24, 255, 136, ${dataArray[i] / 255})`;
-
-            ctx.fillRect(x, canvas.height - (barHeight / 2), barWidth, barHeight / 2);
-
-            x += barWidth + 1;
+            ctx.fillStyle = `rgba(24, 255, 136, ${0.25 + (dataArray[i] / 255) * 0.75})`;
+            ctx.fillRect(x, mid - barHeight / 2, barWidth, barHeight);
         }
     }
 
@@ -138,17 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function selectTrack(target, autoplay) {
 
         const src = target.getAttribute("data-src");
-        const videoSrc = target.getAttribute("data-video");
         const title = target.getAttribute("data-title");
         const artist = target.getAttribute("data-artist");
 
         source.src = src;
         audio.load();
-
-        if (videoSrc) {
-            videoSource.src = videoSrc;
-            video.load();
-        }
 
         if (autoplay) {
             if (!isVisualizerInit) {
@@ -158,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 audioContext.resume();
             }
             audio.play();
-            if (videoSrc) video.play();
             playBtn.textContent = "⏸";
             playBtn.classList.add("playing");
         }
@@ -218,11 +222,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (audio.paused) {
             audio.play();
-            if (videoSource.getAttribute("src")) video.play();
             playBtn.textContent = "⏸";
         } else {
             audio.pause();
-            video.pause();
             playBtn.textContent = "►";
         }
     }
@@ -242,12 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isNaN(audio.duration)) {
             const progress = (audio.currentTime / audio.duration) * 100;
             timeline.value = progress;
-            
-            // Sincronizare video dacă fuge sunetul (peste 0.5 sec diferență)
-            // Cerință Math.abs
-            if (Math.abs(video.currentTime - audio.currentTime) > 0.5) {
-                video.currentTime = audio.currentTime;
-            }
         }
     });
 
@@ -256,7 +252,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isNaN(audio.duration)) {
             const newTime = (timeline.value / 100) * audio.duration;
             audio.currentTime = newTime;
-            video.currentTime = newTime;
         }
     });
 

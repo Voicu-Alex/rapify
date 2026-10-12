@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapify • Boom Bap</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="top-logo">Rapify</div>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li class="dropdown">
+                <a class="drop-btn">Playlist-uri ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="BoomBap.html">Boom Bap</a></li>
+                    <li><a href="Dark.html">Dark</a></li>
+                    <li><a href="Chill.html">Chill</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- player audio  -->
+<audio id="audio-player">
+    <source id="audio-source" src="" type="audio/mpeg">
+    Browserul tău nu suportă tagul audio.
+</audio>
+
+<main class="page-wrapper">
+
+    <!-- stanga: vizualizator si descrierea piesei -->
+    <section class="left-panel">
+        <div class="left-video-wrapper">
+            <canvas id="visualizer"></canvas>
+        </div>
+
+        <div class="info-panel">
+            <h1 class="song-title" id="info-title"></h1>
+            <h2 class="song-artist" id="info-artist"></h2>
+
+            <p class="song-desc" id="info-desc-1"></p>
+            <p class="song-desc" id="info-desc-2"></p>
+            <p class="song-desc song-license" id="info-desc-3"></p>
+        </div>
+    </section>
+
+    <!-- dreapta: lista de piese -->
+    <aside class="right-panel">
+        <div class="right-overlay"></div>
+
+        <div class="track-list-panel">
+            <h2>BOOM BAP</h2>
+
+            <ul class="track-list">
+
+                <!-- Griphop -->
+                <li class="track-item"
+                    data-src="audio/griphop.mp3"
+                    data-title="Griphop"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Griphop"
+                    data-info-artist="Kevin MacLeod • 2008"
+                    data-info-1="Beat hip-hop pe 90 BPM, cu tobe grele și o secțiune masivă de coarde pe fundal."
+                    data-info-2="Sunetul cinematic îl face potrivit pentru intro-uri și versuri cu atitudine."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Griphop</span>
+                    <span class="t-artist">Kevin MacLeod</span>
+                </li>
+
+                <!-- Got Funk -->
+                <li class="track-item"
+                    data-src="audio/got-funk.mp3"
+                    data-title="Got Funk"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Got Funk"
+                    data-info-artist="Kevin MacLeod • 2012"
+                    data-info-1="Funk cu un beat mai mare, pian și alămuri cu efect de disc vechi."
+                    data-info-2="Construit „pentru rapperul gentleman”: groove relaxat, cu vibe clasic de anii ’90."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Got Funk</span>
+                    <span class="t-artist">Kevin MacLeod</span>
+                </li>
+
+                <!-- Vicious -->
+                <li class="track-item"
+                    data-src="audio/vicious.mp3"
+                    data-title="Vicious"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Vicious"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Beat pe 80 BPM cu un pic de swing, bas cald și synth-uri discrete."
+                    data-info-2="Swing-ul apare doar din când în când, ca să rupă monotonia ritmului."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Vicious</span>
+                    <span class="t-artist">Kevin MacLeod</span>
+                </li>
+
+            </ul>
+        </div>
+    </aside>
+
+</main>
+
+<!-- bara de control, inspirata de Spotify -->
+<footer class="player-bar">
+    <div class="player-info">
+        <span id="current-title"></span>
+        <span id="current-artist"></span>
+    </div>
+
+    <button id="play-pause" class="player-btn">►</button>
+
+    <input type="range" id="timeline" value="0" min="0" max="100">
+</footer>
+
+<!-- JS pentru player si schimbarea pieselor -->
+<script src="app.js"></script>
+</body>
+</html>

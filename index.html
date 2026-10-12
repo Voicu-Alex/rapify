@@ -17,9 +17,9 @@
             <li class="dropdown">
                 <a class="drop-btn">Playlist-uri ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="BigL.html">Big L</a></li>
-                    <li><a href="2Pac.html">2Pac</a></li>
-                    <li><a href="IceCube.html">Ice Cube</a></li>
+                    <li><a href="BoomBap.html">Boom Bap</a></li>
+                    <li><a href="Dark.html">Dark</a></li>
+                    <li><a href="Chill.html">Chill</a></li>
                 </ul>
             </li>
         </ul>
@@ -28,210 +28,162 @@
 
 <!-- player audio  -->
 <audio id="audio-player">
-    <source id="audio-source" src="Muzica/Big L - Put It On (Official Music Video).mp3" type="audio/mpeg">
+    <source id="audio-source" src="" type="audio/mpeg">
     Browserul tău nu suportă tagul audio.
 </audio>
 
 <main class="page-wrapper">
 
-    <!-- stanga: video piesă sidescriere -->
+    <!-- stanga: vizualizator si descrierea piesei -->
     <section class="left-panel">
         <div class="left-video-wrapper">
             <canvas id="visualizer"></canvas>
-            <video id="track-video" autoplay muted loop playsinline>
-                <!-- video -->
-                <source id="video-source" src="" type="video/mp4">
-                Browserul tău nu suportă tagul video.
-            </video>
         </div>
 
         <div class="info-panel">
             <h1 class="song-title" id="info-title"></h1>
             <h2 class="song-artist" id="info-artist"></h2>
 
-            <p class="song-desc" id="info-desc-1">
-                
-            </p>
-
-            <p class="song-desc" id="info-desc-2">
-                
-            </p>
-
-            <p class="song-desc" id="info-desc-3">
-                
-            </p>
-        
+            <p class="song-desc" id="info-desc-1"></p>
+            <p class="song-desc" id="info-desc-2"></p>
+            <p class="song-desc song-license" id="info-desc-3"></p>
         </div>
     </section>
 
-    <!-- dreapta: video fundal si listă de piese -->
+    <!-- dreapta: lista de piese -->
     <aside class="right-panel">
-        <!-- video de fundal pentru coloana dreaptă -->
-        <video class="right-bg-video" autoplay muted loop playsinline>
-            <!-- video -->
-            <source src="My Movie.mp4" type="video/mp4">
-            Browserul tău nu suportă tagul video.
-        </video>
-
         <div class="right-overlay"></div>
 
-        <!-- lista de piese -->
         <div class="track-list-panel">
             <h2>Lista de piese</h2>
 
             <ul class="track-list">
 
-                <!-- 2Pac – Hit 'Em Up (Dirty) -->
+                <!-- Griphop -->
                 <li class="track-item"
-                    data-src="Muzica/2Pac - Hit 'Em Up (Dirty) (Music Video).mp3"
-                    data-video="Video/2Pac - Hit 'Em Up (Dirty) (Music Video) HD.mp4"
-                    data-title="Hit 'Em Up"
-                    data-artist="2Pac"
-                    data-info-title="Hit 'Em Up"
-                    data-info-artist="2Pac • 1996"
-                    data-info-1="„Hit 'Em Up” este probabil cel mai celebru diss track din istoria hip-hop-ului, lansat în plin conflict East vs West."
-                    data-info-2="2Pac livrează versuri extrem de agresive, directe și personale, un atac frontal împotriva lui Biggie și Bad Boy Records."
-                    data-info-3="În Rapify, piesa reprezintă esența războiului liric al anilor ’90 și energia brută a lui 2Pac.">
-                    <span class="t-title">Hit 'Em Up</span>
-                    <span class="t-artist">2Pac</span>
+                    data-src="audio/griphop.mp3"
+                    data-title="Griphop"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Griphop"
+                    data-info-artist="Kevin MacLeod • 2008"
+                    data-info-1="Beat hip-hop pe 90 BPM, cu tobe grele și o secțiune masivă de coarde pe fundal."
+                    data-info-2="Sunetul cinematic îl face potrivit pentru intro-uri și versuri cu atitudine."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Griphop</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-
-                <!-- 2Pac ft. Snoop Dogg – 2 Of Amerikaz Most Wanted -->
+                <!-- Got Funk -->
                 <li class="track-item"
-                    data-src="Muzica/2Pac ft. Snoop Dogg - 2 Of Amerikaz Most Wanted (Official Music Video).mp3"
-                    data-video="Video/2Pac ft. Snoop Dogg - 2 Of Amerikaz Most Wanted (Official Music Video).mp4"
-                    data-title="2 Of Amerikaz Most Wanted"
-                    data-artist="2Pac ft. Snoop Dogg"
-                    data-info-title="2 Of Amerikaz Most Wanted"
-                    data-info-artist="2Pac ft. Snoop Dogg • 1996"
-                    data-info-1="„2 Of Amerikaz Most Wanted” îi pune față în față pe 2Pac și Snoop Dogg pe un beat West Coast memorabil."
-                    data-info-2="Piesa e un statement de atitudine, cu referințe la problemele legale și statutul lor în industrie."
-                    data-info-3="În Rapify, track-ul intră în categoria colaborărilor clasice Death Row Records.">
-                    <span class="t-title">2 Of Amerikaz Most Wanted</span>
-                    <span class="t-artist">2Pac ft. Snoop Dogg</span>
+                    data-src="audio/got-funk.mp3"
+                    data-title="Got Funk"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Got Funk"
+                    data-info-artist="Kevin MacLeod • 2012"
+                    data-info-1="Funk cu un beat mai mare, pian și alămuri cu efect de disc vechi."
+                    data-info-2="Construit „pentru rapperul gentleman”: groove relaxat, cu vibe clasic de anii ’90."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Got Funk</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- 2Pac – Still Ballin' -->
+                <!-- Vicious -->
                 <li class="track-item"
-                    data-src="Muzica/2pac- Still Ballin.mp3"
-                    data-video="Video/2pac- Still Ballin.mp4"
-                    data-title="Still Ballin'"
-                    data-artist="2Pac"
-                    data-info-title="Still Ballin'"
-                    data-info-artist="2Pac • 2002"
-                    data-info-1="„Still Ballin'” continuă energia agresivă și încrezătoare a lui 2Pac chiar și în materialele postume."
-                    data-info-2="Beat-ul greu și refrenul catchy o fac o piesă perfectă pentru hype și workout."
-                    data-info-3="În Rapify, piesa reprezintă moștenirea lui Pac în anii 2000, după perioada clasică ’90.">
-                    <span class="t-title">Still Ballin'</span>
-                    <span class="t-artist">2Pac</span>
+                    data-src="audio/vicious.mp3"
+                    data-title="Vicious"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Vicious"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Beat pe 80 BPM cu un pic de swing, bas cald și synth-uri discrete."
+                    data-info-2="Swing-ul apare doar din când în când, ca să rupă monotonia ritmului."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Vicious</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Big L – No Endz, No Skinz -->
+                <!-- MTA -->
                 <li class="track-item"
-                    data-src="Muzica/Big L - No Endz, No Skinz (Official Music Video).mp3"
-                    data-video="Video/Big L - No Endz, No Skinz (Official Music Video).mp4"
-                    data-title="No Endz, No Skinz"
-                    data-artist="Big L"
-                    data-info-title="No Endz, No Skinz"
-                    data-info-artist="Big L • 1993"
-                    data-info-1="„No Endz, No Skinz” îl surprinde pe Big L la început de carieră, deja cu punchline-uri extrem de inteligente."
-                    data-info-2="Flow-ul lui L este rece și precis, peste un beat clasic de New York."
-                    data-info-3="În Rapify, track-ul arată de ce Big L este considerat un liricist subapreciat.">
-                    <span class="t-title">No Endz, No Skinz</span>
-                    <span class="t-artist">Big L</span>
+                    data-src="audio/mta.mp3"
+                    data-title="MTA"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="MTA"
+                    data-info-artist="Kevin MacLeod • 2009"
+                    data-info-1="Piesă urbană, strânsă, gândită pentru rap sau ascultat de sine stătător."
+                    data-info-2="Lovituri mari de percuție și o secțiune B surprinzătoare la mijloc."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">MTA</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Big L – Put It On -->
+                <!-- Lewis and Dekalb -->
                 <li class="track-item"
-                    data-src="Muzica/Big L - Put It On (Official Music Video).mp3"
-                    data-video="Video/Big L - Put It On (Official Music Video).mp4"
-                    data-title="Put It On"
-                    data-artist="Big L"
-                    data-info-title="Put It On"
-                    data-info-artist="Big L • 1994"
-                    data-info-1="„Put It On” este unul dintre cele mai cunoscute track-uri ale lui Big L, un clasic al scenei rap din New York."
-                    data-info-2="Piesa scoate în evidență jocul de cuvinte și flow-ul extrem de tehnic al lui Big L."
-                    data-info-3="În Rapify, track-ul deschide selecția dedicată liricismului pur din anii ’90.">
-                    <span class="t-title">Put It On</span>
-                    <span class="t-artist">Big L</span>
+                    data-src="audio/lewis-and-dekalb.mp3"
+                    data-title="Lewis and Dekalb"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Lewis and Dekalb"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Beat lent, influențat de trap-ul din sudul SUA, pe 72 BPM."
+                    data-info-2="Bas apăsat și hi-hat-uri rapide, tipice pentru trap."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Lewis and Dekalb</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Big L – Street Struck -->
+                <!-- Basic Implosion -->
                 <li class="track-item"
-                    data-src="Muzica/Big L - Street Struck.mp3"
-                    data-video="Video/Big L - Street Struck.mp4"
-                    data-title="Street Struck"
-                    data-artist="Big L"
-                    data-info-title="Street Struck"
-                    data-info-artist="Big L • 1995"
-                    data-info-1="„Street Struck” este partea mai serioasă a lui Big L, cu versuri despre consecințele vieții de stradă."
-                    data-info-2="Instrumentalul melancolic contrastează cu poveștile dure din versuri."
-                    data-info-3="În Rapify, piesa reprezintă zona de storytelling conscious din catalogul lui L.">
-                    <span class="t-title">Street Struck</span>
-                    <span class="t-artist">Big L</span>
+                    data-src="audio/basic-implosion.mp3"
+                    data-title="Basic Implosion"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Basic Implosion"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Beat energic și foarte catchy pe 95 BPM."
+                    data-info-2="Tobe, bas și synth: o bază simplă care cere versuri peste ea."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Basic Implosion</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Big L ft. Miss Jones, Stan Spit & A.G. – Holdin' It Down -->
+                <!-- Chillin Hard -->
                 <li class="track-item"
-                    data-src="Muzica/Big L ft. Miss Jones, Stan Spit & A.G. - Holdin' It Down.mp3"
-                    data-video="Video/Big L ft. Miss Jones, Stan Spit & A.G. - Holdin' It Down.mp4"
-                    data-title="Holdin' It Down"
-                    data-artist="Big L ft. Miss Jones, Stan Spit & A.G."
-                    data-info-title="Holdin' It Down"
-                    data-info-artist="Big L • 2000"
-                    data-info-1="„Holdin' It Down” aduce un refren melodic cântat de Miss Jones peste versurile tehnice ale lui Big L și invitaților."
-                    data-info-2="Track-ul îmbină vibe-ul radio-friendly cu bar-uri grele, tipice lui L."
-                    data-info-3="În Rapify, piesa marchează colaborările mai puțin cunoscute, dar foarte solide ale lui Big L.">
-                    <span class="t-title">Holdin' It Down</span>
-                    <span class="t-artist">Big L ft. Miss Jones, Stan Spit &amp; A.G.</span>
+                    data-src="audio/chillin-hard.mp3"
+                    data-title="Chillin Hard"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Chillin Hard"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Hip-hop amestecat cu shoegaze: tobe, bas și un cor atmosferic."
+                    data-info-2="Perfect pe fundal, între două sesiuni de cod."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Chillin Hard</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Ice Cube – Check Yo Self (Remix) -->
+                <!-- Slow Jam -->
                 <li class="track-item"
-                    data-src="Muzica/Ice Cube - Check Yo Self (Remix) (Official Music Video).mp3"
-                    data-video="Video/Ice Cube - Check Yo Self (Remix) (Official Music Video).mp4"
-                    data-title="Check Yo Self (Remix)"
-                    data-artist="Ice Cube"
-                    data-info-title="Check Yo Self (Remix)"
-                    data-info-artist="Ice Cube • 1993"
-                    data-info-1="„Check Yo Self (Remix)” este versiunea clasică pe beat-ul lui Grandmaster Flash – „The Message”."
-                    data-info-2="Cube livrează bar-uri pline de atitudine și comentarii sociale dure."
-                    data-info-3="În Rapify, remixul e inclus ca exemplu de reinterpretare ’90 a unor instrumentale old-school.">
-                    <span class="t-title">Check Yo Self (Remix)</span>
-                    <span class="t-artist">Ice Cube</span>
+                    data-src="audio/slow-jam.mp3"
+                    data-title="Slow Jam"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Slow Jam"
+                    data-info-artist="Kevin MacLeod • 2016"
+                    data-info-1="Trap întâlnește R&amp;B: bas sinusoidal neted și un drum machine agitat."
+                    data-info-2="Pian electric și synth-uri pentru o atmosferă de noapte."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Slow Jam</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
 
-                <!-- Ice Cube – You Know How We Do It -->
+                <!-- Galactic Rap -->
                 <li class="track-item"
-                    data-src="Muzica/Ice Cube - You Know How We Do It.mp3"
-                    data-video="Video/Ice Cube - You Know How We Do It.mp4"
-                    data-title="You Know How We Do It"
-                    data-artist="Ice Cube"
-                    data-info-title="You Know How We Do It"
-                    data-info-artist="Ice Cube • 1993"
-                    data-info-1="„You Know How We Do It” e unul dintre cele mai chill și smooth track-uri ale lui Ice Cube."
-                    data-info-2="Beat lent, bass puternic și un vibe perfect de West Coast night drive."
-                    data-info-3="În Rapify, piesa intră în selecția de track-uri laid-back, ideale de fundal.">
-                    <span class="t-title">You Know How We Do It</span>
-                    <span class="t-artist">Ice Cube</span>
+                    data-src="audio/galactic-rap.mp3"
+                    data-title="Galactic Rap"
+                    data-artist="Kevin MacLeod"
+                    data-info-title="Galactic Rap"
+                    data-info-artist="Kevin MacLeod • 2023"
+                    data-info-1="Beat spațial pe 120 BPM, lasă mult loc pentru voce."
+                    data-info-2="Atenție la schimbarea de tonalitate de la 1:34."
+                    data-info-3="Muzică: Kevin MacLeod (incompetech.com), licență CC BY 4.0.">
+                    <span class="t-title">Galactic Rap</span>
+                    <span class="t-artist">Kevin MacLeod</span>
                 </li>
-
-                <!-- Ice Cube, Dr. Dre, MC Ren – Hello -->
-                <li class="track-item"
-                    data-src="Muzica/Ice Cube, Dr. Dre, MC Ren - Hello.mp3"
-                    data-video="Video/Ice Cube, Dr. Dre, MC Ren - Hello.mp4"
-                    data-title="Hello"
-                    data-artist="Ice Cube, Dr. Dre, MC Ren"
-                    data-info-title="Hello"
-                    data-info-artist="Ice Cube, Dr. Dre, MC Ren • 2000"
-                    data-info-1="„Hello” reunifică o parte din N.W.A, cu Ice Cube, Dr. Dre și MC Ren pe același track."
-                    data-info-2="Piesa marchează o întoarcere la rădăcini, dar cu sunetul începutului de ani 2000."
-                    data-info-3="În Rapify, „Hello” stă la granița dintre epoca ’90 și noul val, păstrând totuși ADN-ul N.W.A.">
-                    <span class="t-title">Hello</span>
-                    <span class="t-artist">Ice Cube, Dr. Dre, MC Ren</span>
-                </li>
-
 
             </ul>
         </div>
@@ -242,8 +194,8 @@
 <!-- bara de control, inspirata de Spotify -->
 <footer class="player-bar">
     <div class="player-info">
-        <span id="current-title">Put It On</span>
-        <span id="current-artist">Big L</span>
+        <span id="current-title"></span>
+        <span id="current-artist"></span>
     </div>
 
     <button id="play-pause" class="player-btn">►</button>
@@ -251,7 +203,7 @@
     <input type="range" id="timeline" value="0" min="0" max="100">
 </footer>
 
-<!-- JS pentru player, pentru schimbarea pieselor si video -->
+<!-- JS pentru player si schimbarea pieselor -->
 <script src="app.js"></script>
 </body>
 </html>
