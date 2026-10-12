@@ -31,7 +31,7 @@ python3 -m http.server 8000
 | `auth.html`, `auth.css`, `auth.js` | Login page and validation |
 | `index.html` | Home page with all tracks |
 | `BoomBap.html`, `Dark.html`, `Chill.html` | Playlists |
-| `audio/`, `video/` | Media files |
+| `audio/`, `clips/` | Media files |
 | `index.css` | Shared styles for the player pages |
 | `app.js` | Player logic, visualizer, favorites |
 
@@ -46,6 +46,6 @@ From Wikimedia Commons, shown in grayscale:
 
 | File | Source | Author | License |
 | --- | --- | --- | --- |
-| `video/brooklyn.webm` | [Bensonhurst 18th Avenue & 85th Street Brooklyn NY](https://commons.wikimedia.org/wiki/File:Bensonhurst_18th_Avenue_%26_85th_Street_Brooklyn_NY.webm) | GK tramrunner RU | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
-| `video/subway.webm` | [NYC Subway train of R68 cars](https://commons.wikimedia.org/wiki/File:NYC_Subway_train_of_R68_cars.webm) | GK tramrunner RU | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
-| `video/city-night.webm` | [City at night](https://commons.wikimedia.org/wiki/File:City_at_night.webm) | Editor (YouTube) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
+| `clips/brooklyn.webm` | [Bensonhurst 18th Avenue & 85th Street Brooklyn NY](https://commons.wikimedia.org/wiki/File:Bensonhurst_18th_Avenue_%26_85th_Street_Brooklyn_NY.webm) | GK tramrunner RU | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| `clips/subway.webm` | [NYC Subway train of R68 cars](https://commons.wikimedia.org/wiki/File:NYC_Subway_train_of_R68_cars.webm) | GK tramrunner RU | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| `clips/city-night.webm` | [City at night](https://commons.wikimedia.org/wiki/File:City_at_night.webm) | Editor (YouTube) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
